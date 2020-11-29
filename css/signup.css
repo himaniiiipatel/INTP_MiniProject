@@ -1,0 +1,227 @@
+html,body{
+	margin:0;
+	color:#1A5276;
+	background:#c8c8c8;
+	font:600 18px/18px 'Open Sans',sans-serif;
+	background-image: url("1.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	}
+	@media only screen and (max-width: 767px)
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.nav{
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 80px;
+    overflow: hidden;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+}
+
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+}
+
+.nav .links .mainlink{
+    color: #e0501b;
+}
+
+.nav h4{
+    font-size: 22px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.wrap{
+	width:100%;
+	margin:auto;
+	max-width:600px;
+	min-height:600px;
+	vertical-align: left;
+	position:absolute;
+	margin-top: 80px;
+}
+.login{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:30px 70px 50px 110px;
+	background:#ffffff00;
+}
+.login .s1-htm,
+.login .s2-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login .s1,
+.login .s2,
+.lform .head .check{
+	display:none;
+}
+.login .tab,
+.lform .head .label,
+.lform .head .button{
+	text-transform:uppercase;
+}
+.login .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 8px 30px 0;
+	display:inline-block;
+	border-bottom:5px solid transparent;
+}
+.login .s1:checked + .tab,
+.login .s2:checked + .tab{
+	color:#ffffff;
+	border-color:#2471A3;
+	border-style: bold;
+}
+.lform{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.lform .head{
+	margin-bottom:15px;
+}
+.lform .head .label,
+.lform .head .input
+{
+	width:100%;
+	color:#17202A ;
+	display:block;
+	margin: 0 10px 15px 0;
+	border-radius: 25px;
+}
+.lform .head .button{
+	margin: 30px auto 0;
+	width:50%;
+	color:#17202A;
+	display:block;
+	position: relative;
+}
+.lform .head .input,
+.lform .head .button{
+	border:none;
+	padding:12px 20px;
+	border-color: #ffff00;
+	border-radius:20px;
+	background:#D6EAF8;
+}
+.lform .head input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.lform .head .label{
+	color:#1A5276;
+	font-size:15px;
+	font: bold;
+}
+.lform .head .button{
+	background:#D6EAF8;
+}
+.lform .head label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:#D6EAF8 ;
+}
+.lform .head label .icon:before,
+.lform .head label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#D6EAF8 ;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.lform .head label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:5px;
+	transform:scale(0) rotate(0);
+}
+.lform .head label .icon:after{
+	top:6px;
+	right:0;0
+	transform:scale(0) rotate(0);
+}
+.lform .head .check:checked + label{
+	color:#1A5276;
+}
+.lform .head .check:checked + label .icon{
+	background:#1161ee;
+}
+.lform .head .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.lform .head .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login .s1:checked + .tab + .s2 + .tab + .lform .s1-htm{
+	transform:rotate(0);
+}
+.login .s2:checked + .tab + .lform .s2-htm{
+	transform:rotate(0);
+}
+@media only screen and (max-width: 600px){
+.nav{
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    height: auto;
+    overflow-y: hidden;
+}
+
+.nav h4{
+    font-size: 6vw;
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.nav .links a{
+    margin-right: 25px;
+    font-size: 12px;
+    font-weight: 600;
+}
+img,h2{
+	width:100%;
+	height: auto;
+}
+}
+
+@media only screen and (min-device-width: 400px;){
+	body{
+		background-image: url("bg2.jpg");
+		background-repeat: no-repeat;
+	}
